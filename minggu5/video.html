@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Video</title>
+	</head>
+	<body bgcolor="gray">
+		
+		<h1 align="center">Membuat Program Video</h1>
+		<div style="text-align:center">
+			<button onclick="playPause()">Play/Pause</button> 
+			<button onclick="makeBig()">Big</button>
+			<button onclick="makeSmall()">Small</button>
+			<button onclick="makeNormal()">Normal</button>
+			<button onclick="enableCon()">Enable Controls</button>
+			<button onclick="disableCon()">Disable Controls</button>
+			<br><br>
+		<video id="myVideo" width="500px">
+		<source src="cat-herd.webm" type="video/webm">
+		film not support...
+  
+		</video>
+		</div>
+	</body>
+<script> 
+var myVideo = document.getElementById("myVideo"); 
+function durationmyVideo(){
+	alert(myVideo.duration);
+}
+function playPause() { 
+  if (myVideo.paused) 
+    myVideo.play(); 
+  else 
+    myVideo.pause(); 
+	myVideo.loop = true;
+} 
+
+function makeBig() { 
+    myVideo.width = 560; 
+} 
+
+function makeSmall() { 
+    myVideo.width = 320; 
+} 
+
+function makeNormal() { 
+    myVideo.width = 420; 
+} 
+function enableCon() { 
+    myVideo.controls = true; 
+	myVideo.load();
+} 
+function disableCon() { 
+    myVideo.controls = false; 
+	myVideo.load();
+} 
+</script> 
+<div style="text-align:center">
+
+    <iframe width="500" height="300" src="https://www.youtube.com/embed/PHW2avy8S5c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</div>
+
+</html>

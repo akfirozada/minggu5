@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+    <title>Kreasi audio Html</title>
+</head>
+    <link rel="icon" type="image/x-icon" href="media/favicon.png">
+    <meta charset="UTF-8">
+    <meta name="description" content="Html tag audio">
+    <meta name="keywords" content="Mencoba audio HTML">
+    <meta name="author" content="A11.2022.14724">
+    <meta name="viewport" content="width=device-width, initial-scale=1,0">
+   <h1>Belajar tag audio</h1>
+    <button onclick="muterAudio()">Play</button>
+        <button onclick="mandekAudio()">Pause</button>
+        <button onclick="loopONAudio()">Aktifkan Loop</button>
+        <button onclick="loopOFFAudio()">Matikan Loop</button>
+        <button onclick="controlsONAudio()">Aktifkan Controls</button>
+        <button onclick="controlsOFFAudio()">Matikan Controls</button>
+        <button onclick="durasiAudio()">Cek Durasi</button>
+        <button onclick="hide()">Hidden</button>
+        <button onclick="unhide()">Unhidden</button>
+    <br><br>
+    <audio id="akfiaudio">
+        <source src="first love.mp3" type="audio/mp3">
+        Browser anda tidak mensupport.
+    </audio>
+    <br><br>
+   <script>
+        var akfi = document.getElementById("akfiaudio");
+        
+        function muterAudio(){
+            akfi.play();
+        }
+        function mandekAudio(){
+            akfi.pause();
+        }
+        function loopONAudio(){
+            akfi.loop = true;
+        }
+        function loopOFFAudio(){
+            akfi.loop = false;
+        }
+        function controlsONAudio(){
+            akfi.controls = true;
+        }
+        function controlsOFFAudio(){
+            akfi.controls = false;
+        }
+        function durasiAudio(){
+            alert(akfi.duration);
+        }
+        function hide(){
+            akfi.hidden = true;
+        }
+        function unhide(){
+            akfi.hidden = false;
+        }
+        
+        
+    </script>
+</body>
+</html>
